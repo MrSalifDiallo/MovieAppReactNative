@@ -34,13 +34,9 @@ const _Layout = () => {
         options={{
             title:"Home",
             headerShown:false, //Delete the Page Name in Header
-            tabBarIcon:({focused})=>(
-                <TabIcon
-                    focused={focused}
-                    title="Home"
-                    icon={icons.home}
-                />
-            )
+            tabBarIcon:({focused}) => {
+                return <TabIcon focused={focused} title="Home" icon={icons.home} />
+            }
         }}
         />
         
@@ -49,13 +45,9 @@ const _Layout = () => {
         options={{
             title:"Search",
             headerShown:false, //Delete the Page Name in Header
-            tabBarIcon:({focused})=>(
-                <TabIcon
-                    focused={focused}
-                    title="Search"
-                    icon={icons.search}
-                />
-            )
+            tabBarIcon:({focused}) => {
+                return <TabIcon focused={focused} title="Search" icon={icons.search} />
+            }
         }}
         />
 
@@ -64,13 +56,9 @@ const _Layout = () => {
         options={{
             title:"Saved",
             headerShown:false, //Delete the Page Name in Header
-            tabBarIcon:({focused})=>(
-                <TabIcon
-                    focused={focused}
-                    title="Saved"
-                    icon={icons.save}
-                />
-            )
+            tabBarIcon:({focused}) => {
+                return <TabIcon focused={focused} title="Saved" icon={icons.save} />
+            }
         }}
         />
 
@@ -79,13 +67,9 @@ const _Layout = () => {
             options={{
                 title:"Profile",
                 headerShown:false, //Delete the Page Name in Header
-                tabBarIcon:({focused})=>(
-                    <TabIcon
-                        focused={focused}
-                        title="Profile"
-                        icon={icons.person}
-                    />
-                )
+                tabBarIcon:({focused}) => {
+                    return <TabIcon focused={focused} title="Profile" icon={icons.person} />
+                }
             }}
         />
         
