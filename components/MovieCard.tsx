@@ -15,7 +15,7 @@ const MovieCard = ({id, poster_path, title, vote_average, release_date}: Movie) 
               `https://placehold.co/600*400/1a1a1a/ffffff.png`
           }}
           className='w-full h-52 rounded-lg'
-          resizeMode='cover'
+          resizeMode='stretch'
         />
         <View>
           <Text className='text-white text-sm' numberOfLines={1}>{title}</Text>

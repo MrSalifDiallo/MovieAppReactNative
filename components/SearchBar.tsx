@@ -5,9 +5,11 @@ import { icons } from '@/constants/icons'
 interface Props{
     placeholder:string,
     onPress?:()=>void,
+    value?:string,
+    onChangeText?:(text:string)=>void,
 }
 
-const SearchBar = ({placeholder,onPress}:Props) => {  
+const SearchBar = ({placeholder,onPress,value,onChangeText}:Props) => {  
   const capitalizeText = (text: string) => {
     return text.replace(/\b\w/g, l => l.toUpperCase());
   };
@@ -22,12 +24,10 @@ const SearchBar = ({placeholder,onPress}:Props) => {
         tintColor='#ab8bff'
         />
       <TextInput
-      onPress={()=>{
-
-      }}
+      onPress={onPress}
       placeholder={capitalizeText(placeholder)}
-      value=""
-      onChangeText={onPress}
+      value={value}
+      onChangeText={onChangeText}
       placeholderTextColor="#ab8bff"
       className='flex-1 ml-2 text-white'
 
