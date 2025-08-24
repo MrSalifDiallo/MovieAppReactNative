@@ -7,3 +7,5 @@ export const images = {
   highlight,
   rankingGradient,
 };
+
+export const baseURLImageMovie='https://image.tmdb.org/t/p/w500'

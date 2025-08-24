@@ -4,9 +4,9 @@ import { images } from '@/constants/images'
 import MovieCard from '@/components/MovieCard'
 import useFetch from '@/services/useFetch'
 import { fetchPopularMovies } from '@/services/api'
-import { useRouter } from 'expo-router'
 import { icons } from '@/constants/icons'
 import SearchBar from '@/components/SearchBar'
+import { updateSearchCount } from '@/services/appwrite'
 
 const Search = () => {
 
@@ -31,6 +31,18 @@ const Search = () => {
     }, 500); 
     return()=>clearTimeout(TimeoutId)
   },[searchQuery])
+
+  useEffect(()=>{
+    if (searchQuery.trim() && movies && movies.length > 0 && !moviesLoading && !moviesError) {
+      updateSearchCount(searchQuery, movies[0])
+    }
+  },[movies, moviesLoading, moviesError])
+
+  /*useEffect(()=>{
+    if (searchQuery.trim() && movies && movies.length > 2 && !moviesLoading && !moviesError) {
+      updateSearchCount(searchQuery, movies[0])
+    }
+  },[movies, moviesLoading, moviesError])
 
   /*
   Invalid syntax
@@ -117,7 +129,7 @@ const Search = () => {
             (<View className='mt-10 px-5 w-full items-center'>
                   <Text className="text-xl text-gray-500 font-bold text-center">
                     {searchQuery.trim() ? 'No Movies Found for ':"Search for a Movie"}
-                    {searchQuery.trim() && searchQuery.length>=2 && <Text className="text-accent">{searchQuery}</Text>}
+                    {searchQuery.trim() && searchQuery.length>=1 && <Text className="text-accent">{searchQuery}</Text>}
                   </Text>              
             </View> )
             :null   
