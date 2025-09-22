@@ -145,8 +145,8 @@ MovieApp/
 ## 🛠️ Technologies Used
 
 ### 📱 Mobile Framework
-- **React Native** 0.79.5 - Core mobile development framework
-- **Expo** ~53.0.22 - Development platform and toolchain  
+- **React Native** 0.81.4 - Core mobile development framework
+- **Expo** ^54.0.9 - Development platform and toolchain  
 - **Expo Router** ~5.1.5 - File-based routing system
 
 ### 🎨 UI/UX Libraries
@@ -204,6 +204,10 @@ MovieApp/
    Edit `.env` file and add your TMDB API key:
    ```env
    EXPO_PUBLIC_MOVIE_API=your_tmdb_api_key_here
+   EXPO_PUBLIC_APPWRITE_PROJECT_NAME=your_APPWRITE_PROJECTNAME_here #Optional
+   EXPO_PUBLIC_APPWRITE_ENDPOINT="https://nyc.cloud.appwrite.io/v1"  #Endpoint of AppWrite
+   EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_APPWRITE_DATABASE_ID_here
+   EXPO_PUBLIC_APPWRITE_COLLECTION_ID=your_APPWRITE_COLLECTION_ID_here
    ```
 
 4. **Start the development server**
@@ -290,6 +294,14 @@ npx expo start --android
 
 # Run on web browser
 npx expo start --web
+
+# Run on a distant mobile phone with exposition of an optional port[portNumber]
+# With Ngrok
+npx expo start --tunnel 
+
+
+#Take an optional Port 
+npx expo start --tunnel -- --port=portNumber
 ```
 
 ## 📝 Contributing
@@ -456,8 +468,8 @@ MovieApp/
 ## 🛠️ Technologies utilisées
 
 ### 📱 Framework Mobile
-- **React Native** 0.79.5 - Framework de développement mobile principal
-- **Expo** ~53.0.22 - Plateforme de développement et chaîne d'outils
+- **React Native** 0.81.4 - Framework de développement mobile principal
+- **Expo** ~54.0.9 - Plateforme de développement et chaîne d'outils
 - **Expo Router** ~5.1.5 - Système de routage basé sur les fichiers
 
 ### 🎨 Bibliothèques UI/UX
@@ -600,7 +612,15 @@ npx expo start --ios
 npx expo start --android
 
 # Exécuter sur le navigateur web
-npx expo start --web
+npx expo start --
+
+# Exécuter sur un téléphone distant après exposition de [numéroPort]optionnel
+# Avec Ngrok
+npx expo start --tunnel 
+
+
+#Prendre un port 
+npx expo start --tunnel -- --port=numéroPort
 ```
 
 ## 📝 Contribution
