@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MovieApp",
-    "slug": "MovieApp",
+    "slug": "movies",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d43c3785-2d7d-4518-998a-3d460b9ecb1a"
+      }
+    },
+    "owner": "robijr"
   }
 }
