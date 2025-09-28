@@ -38,3 +38,12 @@ yarn-error.*
 
 app-example
 .env
+
+
+# lock files
+package-lock.json
+yarn.lock
+
+#pnpm
+.npmrc
+pnpm-lock.yaml

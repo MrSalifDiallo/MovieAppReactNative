@@ -192,9 +192,22 @@ MovieApp/
    ```
 
 2. **Install dependencies**
+   
+   **2.1 If you're using npm as your package manager**  
    ```bash
    npm install
    ```
+   **2.2 If you're using pnpm as your package manager** 
+      #### Sous PowerShell :
+      ```powershell
+      "node-linker=hoisted" | Out-File -Encoding ascii .npmrc
+      pnpm install
+      ```
+      ### Sous CMD
+      ```bash
+      echo node-linker=hoisted > .npmrc
+      pnpm install
+      ```
 
 3. **Set up environment variables**
    ```bash
@@ -284,24 +297,30 @@ To run the app in development mode:
 
 ```bash
 # Start Expo development server
-npx expo start
+npx expo start # npm
+pnpm start # pnpm
 
 # Run on iOS simulator
-npx expo start --ios
+npx expo start --ios # npm 
+pnpm start --ios # pnpm
 
 # Run on Android emulator  
-npx expo start --android
+npx expo start --android # npm
+pnpm start --android # pnpm
 
 # Run on web browser
-npx expo start --web
+npx expo start --web # npm
+pnpm start --web # pnpm
 
 # Run on a distant mobile phone with exposition of an optional port[portNumber]
 # With Ngrok
-npx expo start --tunnel 
+npx expo start --tunnel # npm
+pnpm start --tunnel # pnpm
 
 
 #Take an optional Port 
-npx expo start --tunnel -- --port=portNumber
+npx expo start --tunnel -- --port=portNumber # npm
+pnpm start --tunnel -- --port=portNumber # pnpm
 ```
 
 ## 📝 Contributing
@@ -515,10 +534,22 @@ MovieApp/
    ```
 
 2. **Installer les dépendances**
+
+   **2.1 Si vous utilisez npm comme gestionnaire de paquets**  
    ```bash
    npm install
    ```
-
+   **2.2 Si vous utilisez pnpm comme gestionnaire de paquets** 
+      #### Sous PowerShell :
+      ```powershell
+      "node-linker=hoisted" | Out-File -Encoding ascii .npmrc
+      pnpm install
+      ```
+      ### Sous CMD
+      ```bash
+      echo node-linker=hoisted > .npmrc
+      pnpm install
+      ```
 3. **Configurer les variables d'environnement**
    ```bash
    cp .env.example .env
@@ -603,24 +634,31 @@ Pour exécuter l'application en mode développement :
 
 ```bash
 # Démarrer le serveur de développement Expo
-npx expo start
+npx expo start # npm
+pnpm start # pnpm
 
 # Exécuter sur le simulateur iOS
-npx expo start --ios
+npx expo start --ios # npm
+pnpm start --ios # pnpm
 
 # Exécuter sur l'émulateur Android
-npx expo start --android
+npx expo start --android # npm
+pnpm start --android # pnpm
 
 # Exécuter sur le navigateur web
-npx expo start --
+npx expo start -- #npm
+pnpm start -- #pnpm
+
 
 # Exécuter sur un téléphone distant après exposition de [numéroPort]optionnel
 # Avec Ngrok
-npx expo start --tunnel 
+npx expo start --tunnel # npm
+pnpm start --tunnel # pnpm
 
 
 #Prendre un port 
-npx expo start --tunnel -- --port=numéroPort
+npx expo start --tunnel -- --port=numéroPort # npm
+pnpm start --tunnel -- --port=numéroPort # pnpm
 ```
 
 ## 📝 Contribution
